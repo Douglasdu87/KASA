@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: 66px 0 29px;
+  text-align: center;
+  margin-top: auto;
+
+  &__logo {
+    height: 40px;
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 62px 0 58px;
+
+    &__text {
+      font-size: 12px;
+    }
+  }
+}

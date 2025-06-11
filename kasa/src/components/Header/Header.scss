@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.header {
+  padding: 40px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo img {
+    height: 68px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 57px;
+  }
+
+  &__nav-link {
+    color: $primary-color;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+
+    &.active {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 20px 0;
+
+    &__logo img {
+      height: 47px;
+    }
+
+    &__nav {
+      gap: 26px;
+    }
+
+    &__nav-link {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+}
