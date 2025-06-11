@@ -1,0 +1,23 @@
+// Variables
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+$text-color: #333;
+
+// Reset CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $text-color;
+}
+
+// Conteneur principal
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
