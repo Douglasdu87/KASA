@@ -1,0 +1,118 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.accommodation {
+  &-container {
+    @include container;
+    padding-top: 0;
+    padding-bottom: $spacing-xl;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-lg;
+
+    @include mobile {
+      flex-direction: column;
+      gap: $spacing-sm;
+    }
+  }
+
+  &-info {
+    flex: 1;
+  }
+
+  &-title {
+    color: $primary-color;
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin: 0 0 $spacing-xs 0;
+
+    @include mobile {
+      font-size: 1.125rem;
+    }
+  }
+
+  &-location {
+    color: $primary-color;
+    font-size: 1.125rem;
+    margin: 0 0 $spacing-lg 0;
+
+    @include mobile {
+      font-size: 0.875rem;
+      margin-bottom: $spacing-sm;
+    }
+  }
+
+  &-tags {
+    display: flex;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+
+    @include mobile {
+      gap: $spacing-xs;
+    }
+  }
+
+  &-host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: $spacing-lg;
+
+    @include mobile {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 0;
+    }
+  }
+
+  &-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+}
+
+.host {
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &-name {
+    color: $primary-color;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: right;
+    max-width: 93px;
+
+    @include mobile {
+      font-size: 0.75rem;
+      max-width: 67px;
+    }
+  }
+
+  &-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @include mobile {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+

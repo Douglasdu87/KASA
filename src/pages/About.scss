@@ -1,0 +1,16 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.about {
+  &-container {
+    @include container;
+    padding-top: 0;
+    padding-bottom: $spacing-xl;
+  }
+
+  &-content {
+    max-width: 1023px;
+    margin: 0 auto;
+  }
+}
+

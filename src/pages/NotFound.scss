@@ -1,0 +1,55 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.not-found {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+
+  &-container {
+    @include container;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  &-title {
+    font-size: 18rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+
+    @include mobile {
+      font-size: 6rem;
+    }
+  }
+
+  &-message {
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin: $spacing-xl 0 $spacing-xxl;
+    max-width: 654px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mobile {
+      font-size: 1.125rem;
+      margin: $spacing-lg 0 $spacing-xl;
+    }
+  }
+
+  &-link {
+    color: $primary-color;
+    font-size: 1.125rem;
+    text-decoration: underline;
+    @include transition(opacity);
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include mobile {
+      font-size: 0.875rem;
+    }
+  }
+}
+

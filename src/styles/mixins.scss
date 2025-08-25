@@ -1,0 +1,39 @@
+// Mixin pour les conteneurs
+@mixin container {
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+  
+  @media (max-width: $mobile) {
+    padding: 0 $spacing-sm;
+  }
+}
+
+// Mixin pour les transitions
+@mixin transition($property: all) {
+  transition: $property $transition-base;
+}
+
+// Mixin pour le responsive
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+// Mixin pour les overlays
+@mixin overlay($opacity: 0.3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($black, $opacity);
+}
+

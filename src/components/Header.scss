@@ -1,0 +1,55 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.header {
+  padding: $spacing-lg 0;
+  background: $white;
+
+  &-container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  text-decoration: none;
+
+  &-img {
+    height: 68px;
+    width: auto;
+
+    @include mobile {
+      height: 47px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  gap: $spacing-xl;
+
+  @include mobile {
+    gap: $spacing-sm;
+  }
+
+  &-link {
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 1.5rem;
+    font-weight: 500;
+    @include transition(text-decoration);
+
+    &:hover,
+    &.active {
+      text-decoration: underline;
+    }
+
+    @include mobile {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
